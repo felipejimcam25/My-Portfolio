@@ -1,13 +1,18 @@
 const nav = document.getElementById('nav')
 const pointer = document.getElementById('pointerBanner');
-const selectCountryCode = document.getElementById('countryCode')
+const selectCountryCode = document.getElementById('countryCode');
+const navList = document.getElementById('navList');
+const openNav = document.getElementById('openNav');
+const closeNav = document.getElementById('closeNav');
+
 
 const slider = document.getElementById('slider');
 
 
 document.addEventListener('scroll', navBackgorund);
 
-document.addEventListener('mousemove', (e) => {pointerMovement(e)});
+openNav.onclick = () => navList.classList.add('visible'); 
+closeNav.onclick = () => navList.classList.remove('visible'); 
 
 
 slider.innerHTML += slider.innerHTML;
@@ -15,21 +20,12 @@ slider.innerHTML += slider.innerHTML;
 
 function navBackgorund () {
     let scrollY = window.scrollY;
-    console.log(scrollY);
     
     if(scrollY > 200 ) {
         nav.classList.add('navBg');
     } else {
         nav.classList.remove('navBg');
     }
-}
-
-function pointerMovement(e) {
-    let pointerX = e.clientX;
-    let pointerY = e.clientY;
-
-    pointer.style.top = `${pointerY}px`;
-    pointer.style.left = `${pointerX}px`;
 }
 
 
@@ -48,7 +44,6 @@ async function getCountries () {
 
         const data = await res.json();
         const countries = data.countries;
-        console.log(data);
         
         countries.forEach(country => {
             let option = document.createElement('option');
