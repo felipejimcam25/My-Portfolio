@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full Stack developer Felipe Jimenez's portfolio web. ">
     <title>Felipe Jimenez</title>
-    <link rel="shortcut icon" href="public/assets/images/BannerPhoto.png" type="image/x-icon">
+    <link rel="shortcut icon" href="F" type="image/x-icon">
     <link rel="stylesheet" href="public/assets/icons/fontawesome-free-6.7.2-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/styles.css">
 </head>
