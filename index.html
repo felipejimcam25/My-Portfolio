@@ -46,17 +46,15 @@
             <div class="bannerText">
                 <span class="bannerTextUpper">Hey, I'm</span>
                 <h1 class="principalTitle">Felipe <span class="lastName">Jimenez</span></h1>
-                <span class="BannerTextBelow">Full Stack Developer</span>
+                <span class="BannerTextBelow">Web Developer</span>
             </div>
             <!------------ BANNER TEXT ------------------->
 
             <!------------ BANNER IMAGE ------------------->
             <div class="bannerImage">
                 <img src="public/assets/images/BannerPhoto.png" alt="Felipe Jimenez photo edited with a soft blue shadow on his face" title="Felipe Jimenez">
-                <div class="shadowImg"></div>
             </div>
             <!------------ BANNER IMAGE ------------------->
-            
         </div>
         <!------------ BANNER STRUCTURE ------------------->
     </header>
@@ -81,7 +79,6 @@
                     <img class="codeIcon" src="public/assets/languagesIcons/wordpress.png" alt="html icon">
                     <img class="codeIcon" src="public/assets/languagesIcons/figma.png" alt="Figma icon">
                     <img class="codeIcon" src="public/assets/languagesIcons/photoshop.png" alt="photoshop icon">
-                    
                 </div>
             </article>
         </section>
@@ -166,8 +163,116 @@
             </section>
             <!------------ PROJECTS SECTION STRUCTURE ------------------->
 
+            <!------------ CONTACT SECTION STRUCTURE ------------------->
+            <section class="contactSection">
+                <article class="contactHead container">
+                    <h2>Contact Me</h2>
+                </article>
+                <article class="contactContent container">
+                    <div class="contactInfo">
+                        <h3 class="contactTitle">Contact Information</h3>
+                        <div class="contactData">
+                            <div class="contactItem">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andreyfelipejimcam@gmail.com" target="_blank">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <span>andreyfelipejimcam@gmail.com</span>
+                                </a>
+                            </div>
+                            <div class="contactItem">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+506 8778 6050</span>
+                            </div>
+                        </div>
+                        <div class="socialInfo">
+                            <span>Check out my socials</span>
+                            <ul class="wrapper">
+                                <li class="icon facebook">
+                                    <span class="tooltip">Github</span>
+                                    <i class="fa-brands fa-github"></i>
+                                </li>
+                                <li class="icon twitter">
+                                    <span class="tooltip">LinkedIn</span>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </li>
+                                <li class="icon instagram">
+                                    <span class="tooltip">Instagram</span>
+                                    <i class="fa-brands fa-instagram"></i>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="contactForm">
+                        <form action="#" class="formContainer">
+                            <div class="formSpaces nameSpace">
+                                <div class="formControl">
+                                    <label for="fName">First Name</label>
+                                    <input type="text" id="fName">
+                                </div>
+                                <div class="formControl">
+                                    <label for="lName">Last Name</label>
+                                    <input type="text" id="lName">
+                                </div>
+                            </div>
+
+                            <div class="formSpaces">
+                                <div class="formControl">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email">
+                                </div>
+                                <div class="formControl">
+                                    <label for="phone">Phone Number</label>
+                                    <div class="phoneControl">
+                                        <select name="countryCode "  id="countryCode">
+                                            <!-- HERE WILL APPEAR ALL THE COUNTRIES INTERNATIONAL PREFIX -->
+                                        </select>
+                                        <input type="text" id="phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="formControl">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" cols="90" class="message"></textarea>
+                            </div>
+                            <button type="submit" class="contactBtn"> <span class="cvText">Send</span></button>
+
+                        </form>
+                    </div>
+                </article>
+            </section>
+            <!------------ CONTACT SECTION STRUCTURE ------------------->
     </main>
     <!------------ MAIN STRUCTURE ------------------->
+
+
+    <!------------ FOOTER STRUCTURE ------------------->
+
+    <footer>
+        <div class="footerContainer container">
+            <div class="optionsFooter">
+                <ul class="footerList">
+                    <li><a href="#" class="footerLink">Home</a></li>
+                    <li><a href="#" class="footerLink">About Me</a></li>
+                    <li><a href="#" class="footerLink">Projects</a></li>
+                    <li><a href="#" class="footerLink">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footerSocial">
+                <ul class="socialList">
+                    <li><a href="" class="socialLink"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="" class="socialLink"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="" class="socialLink"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="" class="socialLink"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+            <div class="footerCopy">
+                <p>&copy Felipe Jimenez, Developer Website. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!------------ FOOTER STRUCTURE ------------------->
 
 
 
