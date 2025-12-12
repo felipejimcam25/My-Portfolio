@@ -1,3 +1,11 @@
+<?php
+    require_once __DIR__ .  "/../includes/db.php";
+
+    $query = $pdo->query("SELECT * FROM banner WHERE id = 1");
+    $banner = $query->fetch();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +14,8 @@
     <meta name="description" content="Full Stack developer Felipe Jimenez's portfolio web. ">
     <title>Felipe Jimenez</title>
     <link rel="shortcut icon" href="F" type="image/x-icon">
-    <link rel="stylesheet" href="public/assets/icons/fontawesome-free-6.7.2-web/css/all.min.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="assets/icons/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!------------ HEADER STRUCTURE ------------------->
@@ -56,15 +64,15 @@
             
             <!------------ BANNER TEXT ------------------->
             <div class="bannerText">
-                <span class="bannerTextUpper">Hey, I'm</span>
-                <h1 class="principalTitle">Felipe <span class="lastName">Jimenez</span></h1>
-                <span class="BannerTextBelow">Web Developer</span>
+                <span class="bannerTextUpper"><?= $banner["banner_upper_text"] ?></span>
+                <h1 class="principalTitle"><?= $banner["banner_h1"] ?> <span class="lastName"><?= $banner["banner_h1_span"] ?></span></h1>
+                <span class="BannerTextBelow"><?= $banner["banner_below_text"] ?></span>
             </div>
             <!------------ BANNER TEXT ------------------->
 
             <!------------ BANNER IMAGE ------------------->
             <div class="bannerImage">
-                <img src="public/assets/images/BannerPhoto.png" alt="Felipe Jimenez photo edited with a soft blue shadow on his face" title="Felipe Jimenez">
+                <img src="../imgFile/<?= $banner['banner_image'] ?>" alt="Felipe Jimenez photo edited with a soft blue shadow on his face" title="Felipe Jimenez">
             </div>
             <!------------ BANNER IMAGE ------------------->
         </div>
@@ -79,18 +87,18 @@
         <section class="carouselSection">
             <article class="carouselContent container">
                 <div class="slideTrack" id="slider">
-                    <img class="codeIcon" src="public/assets/languagesIcons/html.png" alt="html icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/css.png" alt="css icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/js.png" alt="Javascript icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/React.png" alt="React icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/php.png" alt="Php icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/mysql.png" alt="MySql icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/node.png" alt="Node icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/git.png" alt="git icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/github.png" alt="GitHub icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/wordpress.png" alt="html icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/figma.png" alt="Figma icon">
-                    <img class="codeIcon" src="public/assets/languagesIcons/photoshop.png" alt="photoshop icon">
+                    <img class="codeIcon" src="assets/languagesIcons/html.png" alt="html icon">
+                    <img class="codeIcon" src="assets/languagesIcons/css.png" alt="css icon">
+                    <img class="codeIcon" src="assets/languagesIcons/js.png" alt="Javascript icon">
+                    <img class="codeIcon" src="assets/languagesIcons/React.png" alt="React icon">
+                    <img class="codeIcon" src="assets/languagesIcons/php.png" alt="Php icon">
+                    <img class="codeIcon" src="assets/languagesIcons/mysql.png" alt="MySql icon">
+                    <img class="codeIcon" src="assets/languagesIcons/node.png" alt="Node icon">
+                    <img class="codeIcon" src="assets/languagesIcons/git.png" alt="git icon">
+                    <img class="codeIcon" src="assets/languagesIcons/github.png" alt="GitHub icon">
+                    <img class="codeIcon" src="assets/languagesIcons/wordpress.png" alt="html icon">
+                    <img class="codeIcon" src="assets/languagesIcons/figma.png" alt="Figma icon">
+                    <img class="codeIcon" src="assets/languagesIcons/photoshop.png" alt="photoshop icon">
                 </div>
             </article>
         </section>
@@ -112,7 +120,7 @@
                         <a href="public/externalFiles/CV_FELIPE JIMENEZ-Eng.pdf" class="cvBtn" download="Felipe's Cv"><span class="cvText">Download CV</span></a>
                     </div>
                     <div class="aboutImg">
-                        <img src="public/assets/images/AboutPhoto.png" alt="">
+                        <img src="assets/images/AboutPhoto.png" alt="">
                     </div>
                 </article>
             </section>

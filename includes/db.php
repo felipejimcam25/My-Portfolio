@@ -9,7 +9,7 @@ try {
     ];
     $pdo = new PDO($db, DB_USER, DB_PASS, $options);
 } catch (PDOException $e) {
-    die('DB Connection Failed');
+    die('DB Connection Failed'. $e);
 }
 
 ?>
