@@ -1,6 +1,10 @@
 <?php
 
-require_once __DIR__ . "/../includes/db.php"; // tu archivo de conexión PDO
+//THIS FILE UPDATES THE BANNER TEXTS AND IMAGE
+
+session_start();
+
+require_once __DIR__ . "/../includes/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -9,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $banner_upper_text = $_POST["banner_upper_text"];
     $banner_below_text = $_POST["banner_below_text"];
 
-    // ---- Manejo de imagen ----
+    
     $imageName = null;
 
     if (!empty($_FILES["banner_image"]["name"])) {
@@ -22,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
     } else {
-        // Si no suben imagen, mantener la anterior
+        
         $imageName = $_POST["current_image"];
     }
 

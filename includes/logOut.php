@@ -1,4 +1,6 @@
 <?php
+//THIS FILE IS TO LOG OUT THE SESSION
+
 session_start();
 
 $_SESSION = [];

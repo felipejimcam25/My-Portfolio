@@ -1,5 +1,5 @@
 <?php
-echo 'HOLAAA';
+//LOGIN CONTROL ACCESSS, THIS FILE CALLS THE ADMINLOGIN FUNCTION TO START A SESSION
 session_start();
 
 require_once __DIR__ . '/../includes/functions.php';

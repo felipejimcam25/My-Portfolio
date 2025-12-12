@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/db.php';
 
-
+//ADMIN LOGIN MANAGE FUNCTION
 function adminLogin($username, $user_pass) {
     global $pdo;
     $stmt = $pdo->prepare('SELECT * FROM admins WHERE username = ?');
@@ -26,7 +26,7 @@ function adminLogin($username, $user_pass) {
 
 }
 
-
+//MANAGE SESSION PERMISSIONS TO ACCESS THE ADMIN PATH FUNCTION
 function requireLogin() {
     if(!isset($_SESSION['id'])) {
         $_SESSION = [];

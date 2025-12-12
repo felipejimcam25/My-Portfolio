@@ -1,4 +1,7 @@
 <?php
+
+//LOGIN FILE TO START SESSION
+
     require_once __DIR__ . '/../includes/loginControl.php';
 ?>
 
